@@ -7,6 +7,7 @@ $("#sizePicker :submit").on("click", function(evt) {
     makeGrid();
 });
 // When size is submitted by the user, call makeGrid()
+$(body).empty();
 function makeGrid() {
     let body = $("#pixel_canvas")[0];
     rowVal = $("#input_height").val();
