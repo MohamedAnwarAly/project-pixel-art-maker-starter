@@ -4,12 +4,14 @@ let rowVal, colVal;
 //Select size input
 $("#sizePicker :submit").on("click", function(evt) {
     evt.preventDefault();
+    $("#pixel_canvas").empty();
     makeGrid();
 });
 // When size is submitted by the user, call makeGrid()
-$(body).empty();
+
 function makeGrid() {
     let body = $("#pixel_canvas")[0];
+   // $(body).html() = "";
     rowVal = $("#input_height").val();
     colVal = $("#input_width").val();
     for (let r = 0; r < rowVal; r++) {
